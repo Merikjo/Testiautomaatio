@@ -8,6 +8,20 @@
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
+<p>&nbsp;</p>
+
+@using (Html.BeginForm())
+{
+    <input name="pvm" type="text" />
+    <input id="Submit1" type="submit" value="Lähetä" />
+}
+
+<p>&nbsp;</p>
+@if (ViewBag.Päivämäärä != null)
+{
+    <pre>@ViewBag.Päivämäärä</pre>
+}
+
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>

@@ -13,6 +13,14 @@ namespace WebApplicationTestiautomaatio.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(string pvm)
+        {
+            DateTime date = Utilities.DateParsing.ParseFinnishDate(pvm);
+            ViewBag.Päivämäärä = date;
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -25,6 +33,18 @@ namespace WebApplicationTestiautomaatio.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult TallennaEnnatys(int? id)
+        {
+            if (id.HasValue)
+            {
+                int arvaustenMäärä = id.Value;
+                // TODO: tallennus tietokantaan
+            }
+
+            var ok = new { success = true };
+            return Json(ok, JsonRequestBehavior.AllowGet);
         }
     }
 }
