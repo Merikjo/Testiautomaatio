@@ -10,6 +10,7 @@ namespace WebApplicationTestiautomaatio.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.TämäViikko = Utilities.DateParsing.GetWeekNumber(DateTime.Today);
             return View();
         }
 
