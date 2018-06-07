@@ -7,7 +7,7 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
+        [TestMethod] //attribuutti
         public void PäivämääräTestit()
         {
             // kelvollinen päivämäärä
